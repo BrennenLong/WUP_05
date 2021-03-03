@@ -50,12 +50,21 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-This table shows that about 59% of women that got the drug recieved AIDS, and 41% received Placebo.
+This table shows that about 59% of women that got the drug received AIDS, and 41% received Placebo.
 
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+p-value = 0.0000659, this result is too small. So the result we were given is not likely to happen by chance.  
+
+The odds ratio 1.543902 means women who got the drug were about 1.5x more likely to get Aids than women who got Placebo
 
 # Discussion and Conclusion
 
